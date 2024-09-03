@@ -100,8 +100,26 @@
             color: #e5e5e5;
         }
 
+        .chkbx{
+            width: 80%;
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top: 20px;
+        }
+
+        .chkbx label{
+            width: 100%;
+            margin: 0;
+        }
+
+        .chkbx input{
+            width: 20%;
+            height: 20px;
+            margin: 0;
+        }
+
         button {
-            margin-top: 50px;
+            margin-top: 20px;
             width: 100%;
             background-color: #ffffff;
             color: #080710;
@@ -110,16 +128,18 @@
             font-weight: 600;
             border-radius: 5px;
             cursor: pointer;
-        }
-
-        button:hover{
             opacity: 0.5;
         }
 
+        button:hover{
+            opacity: 1;
+        }
+
         .signup {
-            margin-top: 30px;
+            margin-top: 20px;
             display: flex;
             justify-content: center;
+            cursor: pointer;
         }
 
         .signup div {
@@ -133,7 +153,43 @@
         }
 
         .signup div:hover {
-            background-color: rgba(255, 255, 255, 0.47);
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        #form2{
+            display: none;
+            height: 600px;
+        }
+
+        #form2 button{
+            margin-top: 25px;
+        }
+
+        #form2 .signup{
+            margin-top: 20px;
+        }
+
+        .login {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .login div {
+            background: red;
+            width: 150px;
+            border-radius: 3px;
+            padding: 5px 10px 10px 5px;
+            background-color: rgba(255, 255, 255, 0.27);
+            color: #eaf0fb;
+            text-align: center;
+        }
+
+        .login div:hover {
+            background-color: #ffffff;
+            color: #000;
         }
     </style>
 </head>
@@ -152,10 +208,34 @@
         <label for="password">Password</label>
         <input type="password" placeholder="Password" id="password" required>
 
+        <div class="chkbx">
+            <label for="checkbox">Keep me logged in</label>
+            <input type= "checkbox">
+        </div>
+
         <button type="submit">Login</button>
 
         <div class="signup">
             <div id="signup">Sign Up</div>
+        </div>
+    </form>
+
+    <form id="form2">
+        <h3>Sign Up</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" required>
+
+        <label for="password">Enter Password Again</label>
+        <input type="password" placeholder="Password" id="password" required>
+
+        <button type="submit">Sign Up</button>
+
+        <div class="login">
+            <div id="login">Login</div>
         </div>
     </form>
 

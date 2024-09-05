@@ -2,217 +2,244 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title> BIGBOOK</title>
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css'>
-  <link rel="stylesheet" href="./style.css">
 
+    <title>Login / Sign up</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style media="screen">
+        *,
+        *:before,
+        *:after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #080710;
+        }
+
+        .background {
+            width: 430px;
+            height: 520px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+
+        .background .circle {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .circle:first-child {
+            background: linear-gradient(#1845ad, #23a2f6);
+            left: -80px;
+            top: -80px;
+        }
+
+        .circle:last-child {
+            background: linear-gradient(to right, #ff512f, #f09819);
+            right: -30px;
+            bottom: -80px;
+        }
+
+        form {
+            height: 520px;
+            width: 400px;
+            background-color: rgba(255, 255, 255, 0.13);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+        }
+
+        form * {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+
+        form h3 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        input {
+            display: block;
+            height: 50px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        ::placeholder {
+            color: #e5e5e5;
+        }
+
+        .chkbx {
+            width: 80%;
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top: 20px;
+        }
+
+        .chkbx label {
+            width: 100%;
+            margin: 0;
+        }
+
+        .chkbx input {
+            width: 20%;
+            height: 20px;
+            margin: 0;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #ffffff;
+            color: #080710;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.5;
+        }
+
+        button:hover {
+            opacity: 1;
+        }
+
+        .signup {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .signup div {
+            background: red;
+            width: 150px;
+            border-radius: 3px;
+            padding: 5px 10px 10px 5px;
+            background-color: rgba(255, 255, 255, 0.27);
+            color: #eaf0fb;
+            text-align: center;
+        }
+
+        .signup div:hover {
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        #form2 {
+            display: none;
+            height: 600px;
+        }
+
+        #form2 button {
+            margin-top: 25px;
+        }
+
+        #form2 .signup {
+            margin-top: 20px;
+        }
+
+        .login {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .login div {
+            background: red;
+            width: 150px;
+            border-radius: 3px;
+            padding: 5px 10px 10px 5px;
+            background-color: rgba(255, 255, 255, 0.27);
+            color: #eaf0fb;
+            text-align: center;
+        }
+
+        .login div:hover {
+            background-color: #ffffff;
+            color: #000;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="background">
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <form id="form">
+        <h3>Login</h3>
 
-  <body>
-    <section class="top">
-      <div class="outer">
-        <div class="inner">
-          <div class="bg home">
-            <div class="scroll">
-              <p>Welcome to BIGBOOK!</p>
-              <p>Find Your Next Story</p>
-            </div>
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username1" required>
 
-            <!-- <img src="../images/flipbook.webp" alt=""> -->
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password1" required>
 
-            <div class="home-content">
-              <h1>
-                BIGBOOK
-              </h1>
-              <p>
-                Welcome to BIGBOOK, the ultimate destination for all your search for a good story! We've
-                carefully collected the greatest stories ever written, ranging from millenial epics to modern best sellers.
-                Find your next story!
-              </p>
-              <ul class="links">
-                <li>
-                  <a href="#"><ion-icon class="icon" name="logo-amazon"></ion-icon></a>
-                </li>
-                <li>
-                  <a href="#"><ion-icon class="icon" name="logo-google"></ion-icon></a>
-                </li>
-                <li>
-                  <a href="#"><ion-icon class="icon" name="logo-youtube"></ion-icon></a>
-                </li>
-                <li>
-                  <a href="#"><ion-icon class="icon" name="logo-instagram"></ion-icon></a>
-                </li>
-                <!-- <div class="btn">
-                  <a href="">
-                    <button type=""><span>View Collection</span><ion-icon name="arrow-forward-circle-outline" class="arrow-icon"></ion-icon></button>
-                  </a>
-                </div> -->
-              </ul>
-            </div>
-          </div>
+        <div class="chkbx">
+            <label for="checkbox">Keep me logged in</label>
+            <input type="checkbox">
         </div>
-      </div>
 
-    </section>
+        <button type="submit" id="first_login">Login</button>
 
-    <section>
-      <div class="outer">
-        <div class="inner">
-          <div class="bg content">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <a href="Sub/shakespeare.html">
-                    <img
-                    src="images/william-Shakespeare.jpg"
-                    alt="shakespopi" />
-                  </a>
-                  <div class="title">
-                    <h2>William Shakespear</h2>
-                    <p>English Playwright and poet</p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="Sub/anaHuang.html">
-                    <img
-                    src="images/ana huang.webp"
-                    alt="Ana Huang" />
-                  </a>
-                  <div class="title">
-                    <h2>Ana Huang</h2>
-                    <p>One of Amazon's Bestselling Author</p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="Sub/turtleme.html">
-                    <img
-                    src="images/turtleMe.webp"
-                    alt="TurtleMe" />
-                  </a>
-                  <div class="title">
-                    <h2>TurtleMe</h2>
-                    <p>Japanese Mangaka</p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="Sub/julia.html">
-                    <img
-                    src="images/julia-quinn.jpg"
-                    alt="Julie baby" />
-                  </a>
-                  <div class="title">
-                    <h2>Julia Quinn</h2>
-                    <p>Author of Historical Romance Fiction</p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="Sub/tahereh.html">
-                    <img
-                    src="images/tahereh mafi.jpg"
-                    alt="Tahereh Mafi" />
-                  </a>
-                  <div class="title"> 
-                    <h2>Tahereh Mafi</h2>
-                    <p>Iranian writer</p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="Sub/jkr.html">
-                    <img
-                    src="images/jk-rowling.jpg"
-                    alt="J.K. Rowling" />
-                  </a>
-                  <div class="title">
-                    <h2>J.K. Rowling</h2>
-                    <p>British author and philanthropist</p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="Sub/charles.html">
-                    <img
-                    src="images/Charles-Dickens.webp"
-                    alt="madonna" />
-                  </a>
-                  <div class="title">
-                    <h2>Charles Dickens </h2>
-                    <p>English Novelist and Journalist</p>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <a href="Sub/jrr.html">
-                    <img
-                    src="images/jrr-tolkien.webp"
-                    alt="J.R.R. Tolkien" />
-                  </a>
-                  <div class="title">
-                    <h2>J.R.R. Tolkien</h2>
-                    <p>English writer and philologist</p>
-                  </div>
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
+        <div class="signup">
+            <div id="signup">Sign Up</div>
         </div>
-      </div>
-    </section>
+    </form>
 
-    <section>
-      <div class="outer">
-        <div class="inner">
-          <div class="bg info">
-            <img src="images/book img.gif" alt="">
-            
-            <div class="info-content">
-              <h1>Why Choose BIGBOOK?</h1>
-              <p>
-                You love books and you are a huge fan of the thrill, the suspense,
-                the romance, the adventure, the mystery, the horror,
-                let's simply call it "The Feels" of reading an intriguing
-                story. Well, guess what? They're all here for you!
-                We have all the fantastic and goosebumps inducing tales you would
-                want to read. We have carefully selected the best of the best over the years
-                for you. You can read your books online without any ad interruption.
-                <!--If you love books and are a big fan of  the thrilling
-                If you love the '80s or are just enjoying its music, 
-                is here for you. We have all those fantastic 80's songs in one
-                place. You can listen to the famous hits, and we've made special
-                playlists for different moods. You can even download songs to
-                listen to them without the internet. No annoying ads will
-                interrupt your music experience. It's like a time machine to the
-                amazing '80s music era. Come and join the fun! -->
-              </p>
-              <div class="tag-container">
-                <span>Timeless Hits</span>
-                <span>Selected Readlists</span>
-                <span>Encounter & Discover</span>
-                <span>Goosebumps</span>
-                <span>Ad-Free Reading</span>
-              </div>
-            </div>
-          </div>
+    <form id="form2">
+        <h3>Sign Up</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username2" required>
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password2" required>
+
+        <label for="password">Enter Password Again</label>
+        <input type="password" placeholder="Password" id="password22" required>
+
+        <button type="submit" id="first_signup">Sign Up</button>
+
+        <div class="login">
+            <div id="login">Login</div>
         </div>
-      </div>
-    </section>
+    </form>
 
-    
-  <script src='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js'></script>
-  <script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script>
-  <script src='https://assets.codepen.io/16327/gsap-latest-beta.min.js'></script>
-  <script src='https://assets.codepen.io/16327/Observer.min.js'></script>
-  <script src="./script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>

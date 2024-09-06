@@ -22,7 +22,6 @@ const pass1 = document.querySelector('#password').value;
 //     location.href = "Main/main.html";
 
 //     // }
-
 // });
 
 const loginForm = document.getElementById('form');

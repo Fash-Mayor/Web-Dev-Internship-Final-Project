@@ -36,7 +36,7 @@ loginBtn.addEventListener('click', (e) => {
   if (username !== '' && password !== '') {
     window.location.href = 'Main/main.html';
   } else {
-    Event.preventDefault();
-    // alert('Please fill in both username and password');
+    // Event.preventDefault();
+    alert('Please fill in both username and password');
   }
 });

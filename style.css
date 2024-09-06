@@ -82,7 +82,7 @@ label {
 }
 
 input {
-    font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   display: block;
   height: 50px;
   width: 100%;
@@ -116,7 +116,7 @@ input {
   margin: 0;
 }
 
-button {
+.button {
   margin-top: 20px;
   width: 100%;
   background-color: #ffffff;
@@ -129,7 +129,7 @@ button {
   opacity: 0.5;
 }
 
-button:hover {
+.button:hover {
   opacity: 1;
 }
 

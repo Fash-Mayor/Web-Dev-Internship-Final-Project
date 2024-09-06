@@ -164,6 +164,11 @@ section .bg {
   font-size: 1.3rem;
 }
 
+.links li a img{
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
 .links li a:hover {
   background-color: #257381;
 }

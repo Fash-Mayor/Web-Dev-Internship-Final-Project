@@ -29,14 +29,18 @@ body {
 }
 
 .circle:first-child {
-  background: linear-gradient(#1845ad, #23a2f6);
-  left: -80px;
-  top: -80px;
+  background-image: url(images/kid-reading.jpg);
+  background-size: cover;
+  background-position: 40% 40%;
+  left: -90px;
+  top: -40px;
 }
 
 .circle:last-child {
-  background: linear-gradient(to right, #ff512f, #f09819);
-  right: -30px;
+  background-image: url(images/kid-reading.jpg);
+  background-size: cover;
+  background-position: 40% 40%;
+  right: -60px;
   bottom: -80px;
 }
 

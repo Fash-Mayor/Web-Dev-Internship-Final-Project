@@ -18,7 +18,7 @@ document.getElementById('first_login').addEventListener("click", function () {
         Event.preventDefault;
     }
     else {
-        document.location.href = 'Main/main.html';
+        location.href = "Main/main.html";
     }
 
 });

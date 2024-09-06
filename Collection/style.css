@@ -69,8 +69,11 @@ section p{
 
 article{
   width: 80%;
-  margin: 4rem auto;
-  border-bottom: 2px solid #333;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 article div{
@@ -93,6 +96,11 @@ article p span{
   font-weight: 700;
 }
 
+.hr{
+  
+  border-top: 2px solid #333;
+}
+
 main{
   width: 80%;
   margin: auto;
@@ -104,4 +112,18 @@ main{
 main img{
   width: 30vw;
   height: 100vh;
+}
+
+.circle {
+  position: absolute;
+  top: -2em;
+  left: -2em;
+  width: clamp(150px, 20vw, 400px);
+  height: clamp(150px, 20vw, 400px);
+  background-image: url(../images/kid-reading.jpg);
+  background-size: cover;
+  background-position: 10% 20%;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.6;
 }

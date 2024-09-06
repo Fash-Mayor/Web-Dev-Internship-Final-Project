@@ -14,7 +14,7 @@ let pass1 = document.getElementById('password1');
 document.getElementById('first_login').addEventListener("click", function () {
     // event.preventDefault();
 
-    if (pass1.value.trim() == '') {
+    if (usern1.value.trim() == '' && pass1.value.trim() == '') {
         Event.preventDefault;
     }
     else {
